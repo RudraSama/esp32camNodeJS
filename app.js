@@ -5,6 +5,8 @@ const fs = require('fs');
 const TelegramBot = require('node-telegram-bot-api');
 const app = express();
 
+const PORT = process.env.PORT || 3030;
+
 
 const bot = new TelegramBot('6828955208:AAHx9-LX_MANCDrbriC0f3txawhdKyYS05o');
 
@@ -32,4 +34,6 @@ app.get("/", (req, res)=>{
 
 
 bot.startPolling();
-app.listen(8080);
+app.listen(PORT, ()=>{
+  console.log(`Started Listening at ${PORT}`);
+});
