@@ -6,7 +6,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const app = express();
 
 
-const bot = new TelegramBot('TELEGRAM-BOT TOKEN');
+const bot = new TelegramBot('6828955208:AAHx9-LX_MANCDrbriC0f3txawhdKyYS05o');
 
 const bodyParser = require('body-parser');
 
@@ -26,7 +26,7 @@ app.post('/receiveBuffer', (req, res) => {
 });
 
 app.get("/", (req, res)=>{
-    return "working";
+    res.send("working");
 });
 
 
